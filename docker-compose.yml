@@ -1,0 +1,19 @@
+---
+version: '3.5'
+
+services:
+  app:
+    build: ./app
+    container_name: go-app
+    ports:
+      - "8080:8080"
+    env_file:
+      - vars.env
+  postgres:
+    image: postgres:11
+    container_name: postgres-db
+    hostname: postgres-db
+    env_file:
+      - vars.env
+    ports:
+      - "5432:5432"
