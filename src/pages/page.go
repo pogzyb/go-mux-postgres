@@ -1,8 +1,7 @@
 package pages
 
 type Page struct {
-	Title		string
-	Filename	string
-	Alert		[2]string
+	Name     	string
+	Filename 	string
 	Data		map[string]interface{}
 }
